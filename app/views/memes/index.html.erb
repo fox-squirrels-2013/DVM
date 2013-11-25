@@ -3,14 +3,16 @@
 </header>
 
 <div class="add-a-meme">
-<%= link_to "+ add a meme", new_meme_path, class: "add-a-meme " %>
+<%= link_to "+ Add a Meme", new_meme_path, class: "add-a-meme " %>
 </div>
 
 <div class="new">
 <div class="visible">
 <%= form_for @meme, method: "post" do |f| %>
 <%= f.text_field :title, :placeholder => "Title your Meme" %><br>
-<%= f.text_field :image_url, id:"meme_url", :placeholder => "Paste Image URL" %><br>
+<%= f.text_field :image_url, id:"meme_url", :placeholder => "Paste Image URL" %>
+<%= cl_image_upload_tag(:image_id) %>
+<br>
 or
 <div class="wrapper">
 <%= f.file_field :image_url %>
@@ -30,8 +32,9 @@ or
 
 <div class = "memes">
 
+
 <% @memes.shuffle.each do |meme|%>
-  <%= link_to image_tag(meme.image_url, size: "200x200", class:"meme", alt:meme.title), meme_path(meme) %>
+  <%= link_to cl_image_tag(meme.public_id.concat("."+meme.format), :crop => :limit, :height => 200, class:"meme", alt:meme.title), meme_path(meme) %>
 <%end %>
 
 </div>

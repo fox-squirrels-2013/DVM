@@ -1,7 +1,8 @@
 
 <table class="caption_table">
-  <% @captions.each do |caption| %>
-  <tr><td><div class="vote_up"><button id ="<%=caption.id%>" class = "vote_up_button"></button><br><%=caption.votes%></div></td><td><%= caption.title%></td><td>-<%=caption.signature%></td></tr>
+
+  <% @captions.each do |caption, votes| %>
+  <tr><td><div class="vote_up"><button id ="<%=caption.id%>" class = "vote_up_button"></button><br><span class="vote_number"><%=caption.votes%></span></div></td><td><%= caption.title%></td><td>-<%=caption.signature%></td></tr>
   <% end %>
 </table>
 

@@ -45,8 +45,8 @@ div.pimp_meme{
   }*/
 
   div.image{
-    height: 400px;
-    width: 400px;
+    /*height: 400px;
+    width: 400px;*/
     position: relative;
     margin: 0 auto;
   }
@@ -186,7 +186,7 @@ h1.meme_show{
 
 img.meme_show{
   margin: 0 auto ;
-  border: solid 5px rgba(138,150,150,0.7) ;
+  border: solid 8px rgba(138,150,150,0.7) ;
   border-radius: .25em;
 }
 
@@ -258,16 +258,16 @@ textarea {
   }
 
   div.image{
-    height: 200px;
-    width: 200px;
+ /*   height: 200px;
+    width: 200px;*/
     position: relative;
     margin: 0 auto;
   }
 
 
   img.meme_show{
-    width: 200px;
-    height: 200px;
+   /* width: 200px;
+    height: 200px;*/
     margin: 30px auto 0;
     border: solid 5px rgba(138,150,150,0.7) ;
     border-radius: .25em;

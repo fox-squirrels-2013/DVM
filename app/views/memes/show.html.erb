@@ -4,12 +4,14 @@
 <div class="container">
 <div class="meme" id="meme_box">
 
-<div class="image">
-  <%=image_tag(@meme.image_url, size: "400x400", class:"meme_show", alt:@meme.title)%>
+<div class="image" style='height="<%=@meme.height%>" width="<%=@meme.width%>"'>
+
+  <div class="height-fix"><%=@meme.height%></div>
+  <div class="width-fix"><%=@meme.width%></div>
+
+  <%=cl_image_tag(@meme.public_id.concat("."+@meme.format), :crop => :limit, :width => 400, class:"meme_show", alt:@meme.title)%>
   <p class="image"><%if@captions.first%><%=@captions.first.title%><%end%></p>
 </div>
-
-
 
 </div>
 <div class="caption_table">

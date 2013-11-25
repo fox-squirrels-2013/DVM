@@ -140,6 +140,10 @@ input.file {
   background-color: black;
 }
 
+.height-fix, .width-fix {
+  visibility: hidden;
+  font-size: 1px;
+}
 
 @media screen and (max-width: 800px){
 div.visible{

@@ -9,6 +9,7 @@ class CaptionsController <ApplicationController
 
   def create
     @caption = Caption.create(params[:caption])
+
     render :partial => "/captions/newly_added", :locals => {:caption => @caption}
   end
 

@@ -11,15 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131122234356) do
+ActiveRecord::Schema.define(:version => 20131123055847) do
 
   create_table "captions", :force => true do |t|
     t.text     "title"
     t.text     "body"
     t.text     "signature"
+    t.integer  "meme_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "meme_id"
     t.integer  "votes"
   end
 
@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(:version => 20131122234356) do
     t.string   "image_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "public_id"
+    t.string   "height"
+    t.string   "width"
+    t.string   "format"
   end
 
 end
