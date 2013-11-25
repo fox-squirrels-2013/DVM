@@ -12,7 +12,11 @@
 
 
 </div>
+  
 <div class="caption_table">
+<% if flash[:already_voted]%>
+  <%="You've already voted for this meme"%>
+<%end%>
 <%= render "captions/captions" %>
 </div>
 <br>

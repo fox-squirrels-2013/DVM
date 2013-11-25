@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(:version => 20131122234356) do
     t.text     "title"
     t.text     "body"
     t.text     "signature"
+    t.integer  "meme_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "meme_id"
     t.integer  "votes"
   end
 

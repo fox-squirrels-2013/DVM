@@ -19,7 +19,7 @@ $(document).ready(function(){
 
   $(".vote_up_button").on("click", function(e){
     e.preventDefault()
-
+    console.log('voted')
     var id = $(this).attr("id")
     console.log("Vote Up " + id)
     $.ajax({
@@ -29,6 +29,7 @@ $(document).ready(function(){
       location.reload()
     })
   })
+
 
   var orig_text = $(".image p").text()
 
@@ -42,6 +43,4 @@ $(document).ready(function(){
     e.preventDefault
     $(".image p").text(orig_text)
   })
-
-
 })
